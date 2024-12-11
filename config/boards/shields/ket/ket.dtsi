@@ -1,4 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your dtsi
+#include "ket-layouts.dtsi"
 / {
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
@@ -32,4 +33,9 @@
             RC(6,0) RC(6,1) RC(6,2) RC(6,3) RC(6,4) RC(6,5) RC(6,6) RC(6,7)     RC(6,8) RC(6,9) RC(6,10) RC(6,11) RC(6,12) RC(6,13) RC(6,14) RC(6,15)
         >;
     };
+};
+
+&physical_layout0 {
+    kscan = <&kscan0>;
+    transform = <&default_transform>;
 };
