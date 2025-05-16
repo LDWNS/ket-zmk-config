@@ -58,14 +58,14 @@
             , <&key_physical_attrs 100 100 1415  375       0     0     0>
             , <&key_physical_attrs 100 100 1519  391       0     0     0>
             , <&key_physical_attrs 100 100  416  472       0     0     0>
-            , <&key_physical_attrs 100 100  558  613    2500   608   663>
             , <&key_physical_attrs 100 100  533  489    1700   583   539>
             , <&key_physical_attrs 100 100  639  537    3200   689   587>
             , <&key_physical_attrs 100 100  880  529 (-3200)   930   579>
             , <&key_physical_attrs 100 100  986  481 (-1700)  1036   531>
-            , <&key_physical_attrs 100 100  960  605 (-2500)  1010   655>
             , <&key_physical_attrs 100 100 1103  464       0     0     0>
             , <&key_physical_attrs 100 100  442  583     500   492   633>
+            , <&key_physical_attrs 100 100  558  613    2500   608   663>
+            , <&key_physical_attrs 100 100  960  605 (-2500)  1010   655>
             , <&key_physical_attrs 100 100 1077  575  (-500)  1127   625>
             ;
     };
