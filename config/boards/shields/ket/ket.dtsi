@@ -1,12 +1,6 @@
 #include "ket-layouts.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your dtsi
 / {
-    chosen {
-        zmk,physical-layout = &ket_physical_layout;
-    };
-};
-
-/ {
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
@@ -25,7 +19,7 @@
 };
 
 / {
-    default_transform: keymap_transform0 {
+    default_transform: default_transform {
         compatible = "zmk,matrix-transform";
         columns = <16>; // 8 each side
         rows = <6>;
@@ -39,3 +33,9 @@
         >;
     };
 };
+/ {
+    chosen {
+        zmk,physical-layout = &ket_physical_layout;
+    };
+};
+
