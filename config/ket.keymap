@@ -35,26 +35,26 @@
        };
 
        lower {
-            display-name = "Lower";
+            display-name = "Arrows & Fs";
 // -----------------------------------------------------------------------------------------
-// |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7   | F8  | F9  | F10 |      |
-// |      | F11 | BT1 | BT2 | BT3 |     |   |     |      |     |     | F12 |      |
-// |      | HOM | END | PGU | PGD |     |   |  <  |  V   |  ^  |  >  |     |      |
-// |      |     |     |     |     |     |   |     |      |     |     | BTCL|      |
+// |      | F1  | F2  | F3  | F4  | F5  |   |     |      |     |     |     |      |
+// |      | F6  | F7  | F8  | F9  | F10 |   |HOME |PG_DN |PG_UP| END |     |      |
+// |      | F11 | F12 | F13 | F14 | F15 |   |  <  |  V   |  ^  |  >  |     |      |
+// |      | F16 | F17 | F18 | F19 | F20 |   |     |      |     |     |     |      |
 //                    | GUI | MO1 | SPC |   | ENT | MO2  | ALT |
 //                          | LWR | SPC |   | BSPC | RSE  |      
             bindings = <
-   &trans &kp F1   &kp F2  &kp F3    &kp F4    &kp F5                                           &kp F6   &kp F7   &kp F8 &kp F9    &kp F10    &none 
-   &trans &kp F11 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none                                  &none    &none    &none  &none     &kp F12    &none
-   &trans &kp HOME &kp END &kp PG_UP &kp PG_DN &none                                            &kp LEFT &kp DOWN &kp UP &kp RIGHT &none      &none
-   &trans &none    &none   &none     &none     &none                                            &none    &none    &none  &none     &bt BT_CLR &trans
+   &trans &kp F1   &kp F2  &kp F3    &kp F4    &kp F5                                   &none    &none     &none     &none     &none  &none
+   &trans &kp F6   &kp F7  &kp F8    &kp F9    &kp F10                                  &kp HOME &kp PG_DN &kp PG_UP &kp END   &none  &none
+   &trans &kp F11  &kp F12  &kp F13  &kp F14   &kp F15                                  &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none  &none
+   &trans &kp F16  &kp F17  &kp F18  &kp F19   &kp F20                                  &none    &none     &none     &none     &none  &trans
                                                     &trans &trans &trans      &trans &trans &trans
                                                             &trans &trans   &trans &trans
             >;
         };
 
         upper {
-           display-name = "upper";
+           display-name = "Numbs & Symbols";
 // -----------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |  1  |  2  |  3  |  {  |   |  }  |  =  |  &  |  -  |  \  |      |
@@ -72,7 +72,7 @@
             >;
         };
         navigation {
-           display-name = "navigation";
+           display-name = "App nav";
 // -----------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
@@ -87,6 +87,43 @@
    &none &none &none &none &trans &none                                       &kp LC(RA(N1)) &kp LC(RA(N2)) &kp LC(RA(N3)) &kp LC(RA(N4)) &kp LC(RA(N5)) &none 
                                   &trans &trans &trans         &trans &trans &trans
                                           &trans &trans      &trans &trans
+            >;
+        };
+        word_navigation {
+           display-name = "Word nav";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI | MO1 | SPC |   | ENT | MO2  | ALT |
+//                          | LWR | SPC |   | BSPC | RSE  |      
+           bindings = <
+   &none &none &none &none &none &none                               &none &none &none &none &none &none 
+   &none &none &none &none &none &none                               &none &none &none &none &none &none 
+   &none &none &none &none &none &none                               &kp LA(LEFT) &none &none &kp LA(RIGHT) &none &none 
+   &none &none &none &none &none &none                               &none &none &none &none &none &none 
+                           &trans &trans &trans         &trans &trans &trans
+                                &trans &kp LA(BSPC)      &kp DEL &kp LA(DEL)
+            >;
+        };
+
+        controls {
+           display-name = "Controls";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     | moz | idea| term|slack|      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI | MO1 | SPC |   | ENT | MO2  | ALT |
+//                          | LWR | SPC |   | BSPC | RSE  |      
+           bindings = <
+   &none &none &none &none &none &none                               &none &none &none &none &none &none 
+   &none &none &none &none &none &none                               &kp LA(LC(LS(COMMA))) &kp C_VOL_DN &kp C_VOL_UP &kp LA(LC(LS(PERIOD))) &none &none 
+   &none &none &none &none &none &none                               &kp C_PREV &kp C_PP &kp C_NEXT &none &none &none 
+   &none &none &none &none &none &none                               &none &kp LA(LC(LS(K_PLUS))) &none &none &none &none 
+                           &trans &trans &trans         &trans &trans &trans
+                                &trans &trans      &trans &trans
             >;
         };
         extra1 {
