@@ -1,0 +1,14 @@
+file_format: "1"
+id: ket
+name: KET
+type: shield
+url: https://github.com/ldwns/ket/
+requires:
+  - pro_micro
+features:
+  - keys
+  - studio
+#  - pointer
+siblings:
+  - ket_left
+  - ket_right
